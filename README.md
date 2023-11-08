@@ -72,6 +72,8 @@ This query provides a comprehensive view of active loans, including client infor
 
 This query is essential for businesses to monitor the financial health of their active loan portfolio. It provides key information such as client names, loan amounts, interest rates, terms, and payment progress. By joining several tables, the business can see a snapshot of the financial engagements and payment statuses of clients with active loans. This data can be used to manage risk, forecast revenues from interest, and maintain client relationships.
 
+![Query 1](https://github.com/nateshinkle/MIST4610Project1/blob/main/query1.PNG)
+
 SELECT Client.fname, Client.lname, Loan.amount, Loan.interestRate, Loan.Term, Paymentschedule.Payment_Number, Paymenttransaction.amountPaid
 FROM Client
 JOIN Loan ON Client.idClient = Loan.Client_idClient
@@ -85,6 +87,8 @@ This query fetches the names, emails, and credit scores of clients with delinque
 
 The query is useful for identifying clients who are falling behind on loan repayments. By targeting these clients, businesses can take proactive measures such as offering credit counseling, restructuring loans, or initiating collections. This helps minimize losses from delinquencies and maintain a healthy credit environment.
 
+![Query 2](https://github.com/nateshinkle/MIST4610Project1/blob/main/query%202.PNG)
+
 SELECT Client.fname,Client.lname, Client.email, Client.creditScore
 FROM Client
 WHERE Client.idClient IN (SELECT Loan.Client_idClient FROM Loan WHERE Loan.Status = 'Active');
@@ -93,6 +97,8 @@ WHERE Client.idClient IN (SELECT Loan.Client_idClient FROM Loan WHERE Loan.Statu
 This query retrieves the names of clients and the count of loans they have, but only for those who have a history of defaults. This could be used for risk analysis and adjusting loan approval criteria.
 
 By identifying clients with a history of defaults, the business can adjust its loan approval criteria to mitigate risk. This query aids in risk assessment and the implementation of more stringent credit policies for high-risk clients, which is crucial for maintaining a profitable loan portfolio.
+
+![Query 3](https://github.com/nateshinkle/MIST4610Project1/blob/main/query%203.PNG)
 
 SELECT Client.fname,Client.lname, (SELECT COUNT(*) FROM Loan WHERE Loan.Client_idClient = Client.idClient) AS Loan_Count
 FROM Client
@@ -103,6 +109,8 @@ This query groups loan applications by branch and calculates the total number of
 
 This query enables businesses to measure the performance of different branches in terms of loan origination. By analyzing the number and value of loan applications by branch, management can make informed decisions about resource allocation, marketing strategies, and performance incentives.
 
+![Query 4](https://github.com/nateshinkle/MIST4610Project1/blob/main/query%204.PNG)
+
 SELECT Loan_Application.Branch_idBranch, COUNT(*) AS Total_Loans, SUM(Loan_Application.Requested_Amount) AS Total_Amount_Requested
 FROM Loan_Application
 GROUP BY Loan_Application.Branch_idBranch;
@@ -111,6 +119,8 @@ GROUP BY Loan_Application.Branch_idBranch;
 This query selects all overdue payments that are not marked as paid or cancelled, aiding in the identification of pending collections.
 
 This query selects all overdue payments that are not marked as paid or cancelled, aiding in the identification of pending collections.
+
+![Query 5](https://github.com/nateshinkle/MIST4610Project1/blob/main/Query%205.PNG)
 
 SELECT *
 FROM Paymentschedule
@@ -121,6 +131,8 @@ This query selects all loans that have passed the current start date and calcula
 
 It is useful because it can identify overdue payments and calculate interest accrued on active loans. This information is vital for financial planning and for taking appropriate actions to address overdue payments, such as contacting clients or adjusting credit policies.
 
+![Query 6](https://github.com/nateshinkle/MIST4610Project1/blob/main/Query%206.PNG)
+
 SELECT Loan.idLoan, DATEDIFF(CURRENT_DATE, Loan.startDate) AS Days_Active, ROUND((Loan.Amount * Loan.interestRate / 100), 2) AS Interest_Accrued
 FROM Loan
 WHERE Loan.Status = 'Active';
@@ -129,6 +141,8 @@ WHERE Loan.Status = 'Active';
 This query returns the name of all employee's who's name starts with John.
 This SQL query is useful for businesses to quickly retrieve a list of employees with a specific name pattern, which can be used for various administrative or organizational purposes, such as email campaigns, directory listings, or to identify employees for specific communications.
 
+![Query 7](https://github.com/nateshinkle/MIST4610Project1/blob/main/query%207.PNG)
+
 SELECT Employee.Name, Employee.Contact_Info
 FROM Employee
 WHERE Employee.Name REGEXP '^John';
@@ -136,6 +150,8 @@ WHERE Employee.Name REGEXP '^John';
     Query 8
 This query identifies clients who have not taken out a loan yet, which could be useful for targeting marketing efforts or customer outreach.
  Identifying clients who have never taken out a loan can help in targeting new business opportunities. These clients may have potential credit needs that haven't been addressed, and the business can reach out to them with loan offers or financial products.
+ 
+![Query 8](https://github.com/nateshinkle/MIST4610Project1/blob/main/query%208.PNG)
 
 SELECT Client.idClient, Client.fname, Client.lname
 FROM Client
@@ -146,15 +162,19 @@ This query groups loan agreements by year, counts the total number of agreements
 
 it also provides a historical perspective on the lending activity secured by collateral. By aggregating loan agreements by year, businesses can track trends, such as increases or decreases in the value of secured lending, which is crucial for long-term financial planning and risk management.
 
+![Query 9](https://github.com/nateshinkle/MIST4610Project1/blob/main/query%209.PNG)
+
 SELECT YEAR(Loan_Agreement.Sign_Date) AS Year, COUNT(*) AS Total_Agreements, SUM(Collateral.Valuation_Amount) AS Total_Collateral_Value
 FROM Loan_Agreement
 JOIN Collateral ON Loan_Agreement.idLoanAgreement = Collateral.Loan_idLoan
 GROUP BY YEAR(Loan_Agreement.Sign_Date);
 
+
+
     Query 10
 This query aims to provide a branch-level summary of loan activity, focusing on high-credit clients (with scores above 600) and active loans initiated this year. By joining the loan_application table with both loan and client tables, we can derive the total loan amount per branch and the count of distinct clients who have taken loans. The subquery in the HAVING clause calculates 1.5 times the average loan amount issued since the beginning of the year, filtering for branches that exceed this figure, suggesting strong performance. This information is crucial for management as it highlights branches that are not only attracting creditworthy clients but are also disbursing higher loan volumes compared to the average, indicating potential areas for strategic investment or replication of best practices.
  by using filters for branches that are outperforming in terms of loan issuance to high-credit clients. It's crucial for identifying successful branches, understanding factors contributing to higher loan volumes, and potentially replicating these practices across the network to enhance overall business performance.
- 
+ !
 SELECT 
 branch.idBranch, 
 branch.address, 
@@ -179,7 +199,7 @@ SUM(Loan.amount) > (SELECT AVG(Loan.amount) * 1.5 FROM Loan WHERE Loan.startDate
 ORDER BY 
 TotalLoanAmount DESC;
 
-
+![Query 10](https://github.com/nateshinkle/MIST4610Project1/blob/main/Query%2010.PNG)
 
 
 
