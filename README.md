@@ -16,44 +16,44 @@ Employee and Branch tables are instrumental in managing the human and physical a
 The Loan Agreement table provides a legal foundation for the terms of each loan, protecting the business's interests and providing a framework for resolving disputes. The Account table facilitates financial transactions, ensuring that funds move securely and efficiently between the business and its clients. The Credit History table offers a snapshot of the borrower's financial reliability, informing lending decisions and interest rates. Lastly, the Loan Product table allows the business to diversify its offerings and strategize its product portfolio to meet market demand and enhance competitiveness.
 
 Together, these tables form a comprehensive ecosystem that supports strategic decision-making, risk management, customer relationship management, and regulatory compliance, ultimately guiding the business towards sustainable growth and profitability.
-![Data Model](https://github.com/nateshinkle/MIST4610Project1/blob/main/DataModel.png)
+![Data Model](https://github.com/nateshinkle/MIST4610Project1/blob/main/DataModel.PNG)
 
 # Data Dictionary
 Table: Account 
-![Account](https://github.com/nateshinkle/MIST4610Project1/blob/main/Account.png)
+![Account](https://github.com/nateshinkle/MIST4610Project1/blob/main/Account.PNG)
 
 Table: Client 
-![Client](https://github.com/nateshinkle/MIST4610Project1/blob/main/Client.png)
+![Client](https://github.com/nateshinkle/MIST4610Project1/blob/main/Client.PNG)
 
 Table: Collateral 
-![Collateral](https://github.com/nateshinkle/MIST4610Project1/blob/main/Collateral.png)
+![Collateral](https://github.com/nateshinkle/MIST4610Project1/blob/main/Collateral.PNG)
 
 Table: Credit_History 
-![Credit_History](https://github.com/nateshinkle/MIST4610Project1/blob/main/Credit_History.png)
+![Credit_History](https://github.com/nateshinkle/MIST4610Project1/blob/main/Credit_History.PNG)
 
 Table: Employee 
-![Employee](https://github.com/nateshinkle/MIST4610Project1/blob/main/Employee.png)
+![Employee](https://github.com/nateshinkle/MIST4610Project1/blob/main/Employee.PNG)
 
 Table: Loan 
-![Loan](https://github.com/nateshinkle/MIST4610Project1/blob/main/Loan.png)
+![Loan](https://github.com/nateshinkle/MIST4610Project1/blob/main/Loan.PNG)
 
 Table: Loan_Agreement 
-![Loan_Agreement](https://github.com/nateshinkle/MIST4610Project1/blob/main/Loan_Agreement.png)
+![Loan_Agreement](https://github.com/nateshinkle/MIST4610Project1/blob/main/Loan_Agreement.PNG)
 
 Table: Loan_Application 
-![Loan_Application](https://github.com/nateshinkle/MIST4610Project1/blob/main/Loan_Application.png)
+![Loan_Application](https://github.com/nateshinkle/MIST4610Project1/blob/main/Loan_Application.PNG)
 
 Table: Loan_Product 
-![Loan_Product](https://github.com/nateshinkle/MIST4610Project1/blob/main/Loan_Product.png)
+![Loan_Product](https://github.com/nateshinkle/MIST4610Project1/blob/main/Loan_Product.PNG)
 
 Table: Paymenttransaction 
-![Paymenttransaction](https://github.com/nateshinkle/MIST4610Project1/blob/main/Paymenttransaction.png)
+![Paymenttransaction](https://github.com/nateshinkle/MIST4610Project1/blob/main/Paymenttransaction.PNG)
 
 Table: branch 
-![branch](https://github.com/nateshinkle/MIST4610Project1/blob/main/branch.png)
+![branch](https://github.com/nateshinkle/MIST4610Project1/blob/main/branch.PNG)
 
 Table: Paymentschedule 
-![Paymentschedule](https://github.com/nateshinkle/MIST4610Project1/blob/main/paymentschedule.png)
+![Paymentschedule](https://github.com/nateshinkle/MIST4610Project1/blob/main/paymentschedule.PNG)
 # Queries
 
     Query 1 
