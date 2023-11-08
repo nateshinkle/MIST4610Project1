@@ -19,7 +19,9 @@ Together, these tables form a comprehensive ecosystem that supports strategic de
 ![Data Model](https://github.com/nateshinkle/MIST4610Project1/blob/main/DataModel.PNG)
 
 # Data Dictionary
+
 Table: Account 
+
 ![Account](https://github.com/nateshinkle/MIST4610Project1/blob/main/Account.PNG)
 
 Table: Client 
@@ -67,6 +69,7 @@ Table: Paymentschedule
 ![Paymentschedule](https://github.com/nateshinkle/MIST4610Project1/blob/main/paymentschedule.PNG)
 # Queries
 
+![Data Table](https://github.com/nateshinkle/MIST4610Project1/blob/main/datatable.PNG)
     Query 1 
 This query provides a comprehensive view of active loans, including client information, loan details, scheduled payment numbers, and amounts paid. It’s useful for monitoring current loans and payment progress.
 
