@@ -4,6 +4,7 @@ Project 1 for MIST 4610
 
 # Group Shinkle Members:
 Nathan Shinkle 
+![Github Link](https://github.com/nateshinkle/MIST4610Project1)
 
 # Problem Description
 The business model is built on the principle of accessibility and flexibility, providing personalized loan products that meet the unique needs of our clients. We leverage a detailed understanding of our clients' financial situations, which is encapsulated in our relational database through a range of entities that track everything from personal information and credit history to loan agreements and payment transactions.
