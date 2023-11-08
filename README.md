@@ -19,7 +19,41 @@ Together, these tables form a comprehensive ecosystem that supports strategic de
 ![Data Model](https://github.com/nateshinkle/MIST4610Project1/blob/main/DataModel.png)
 
 # Data Dictionary
+Table: Account 
+![Account] (https://github.com/nateshinkle/MIST4610Project1/blob/main/Account.png)
 
+Table: Client 
+![Client] (https://github.com/nateshinkle/MIST4610Project1/blob/main/Client.png)
+
+Table: Collateral 
+![Collateral] (https://github.com/nateshinkle/MIST4610Project1/blob/main/Collateral.png)
+
+Table: Credit_History 
+![Credit_History] (https://github.com/nateshinkle/MIST4610Project1/blob/main/Credit_History.png)
+
+Table: Employee 
+![Employee] (https://github.com/nateshinkle/MIST4610Project1/blob/main/Employee.png)
+
+Table: Loan 
+![Loan] (https://github.com/nateshinkle/MIST4610Project1/blob/main/Loan.png)
+
+Table: Loan_Agreement 
+![Loan_Agreement] (https://github.com/nateshinkle/MIST4610Project1/blob/main/Loan_Agreement.png)
+
+Table: Loan_Application 
+![Loan_Application] (https://github.com/nateshinkle/MIST4610Project1/blob/main/Loan_Application.png)
+
+Table: Loan_Product 
+![Loan_Product] (https://github.com/nateshinkle/MIST4610Project1/blob/main/Loan_Product.png)
+
+Table: Paymenttransaction 
+![Paymenttransaction] (https://github.com/nateshinkle/MIST4610Project1/blob/main/Paymenttransaction.png)
+
+Table: branch 
+![branch] (https://github.com/nateshinkle/MIST4610Project1/blob/main/branch.png)
+
+Table: Paymentschedule 
+![Paymentschedule] (https://github.com/nateshinkle/MIST4610Project1/blob/main/paymentschedule.png)
 # Queries
 
     Query 1 
